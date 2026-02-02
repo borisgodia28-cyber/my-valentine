@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharnise My Valentine</title>
+    
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: palevioletred;
+            font-size: 2.5em;
+            margin-top: 40px;
+        }
+        h2 {
+            color: purple;
+            font-family: cursive;
+            margin: 20px 0;
+        }
+        p {
+            color: plum;
+            background-color: whitesmoke;
+            font-family: cursive;
+            font-weight: bold;
+            max-width: 700px;
+            margin: 10px auto;
+            line-height: 1.5;
+        }
+
+        /* Hearts */
+        .heart {
+            position: absolute;
+            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+            animation: floatHearts linear infinite;
+            pointer-events: none;
+        }
+        @keyframes floatHearts {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-600px); opacity: 0; }
+        }
+
+        /* Music button */
+        .music-btn {
+            background-color: plum;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 20px auto;
+        }
+        .music-btn:hover {
+            background-color: purple;
+            transform: scale(1.1);
+        }
+
+        /* Memory gallery */
+        .memory-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .memory-card {
+            background: white;
+            border-radius: 15px;
+            padding: 10px;
+            max-width: 300px;
+            flex: 1 1 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .memory-card img {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+        }
+        .memory-card figcaption {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+            font-family: cursive;
+            color: #555;
+        }
+        .memory-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeIN {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Valentine buttons */
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .yes-btn { background-color: #ff4d88; color: white; }
+        .always-btn { background-color: #ff1a66; color: white; }
+        .yes-btn:hover { background-color: #e60073; transform: scale(1.1); }
+        .always-btn:hover { background-color: #cc0052; transform: scale(1.1); }
+
+        /* Footer */
+        footer {
+            background-color: plum;
+            color: #666;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px) {
+            .memory-gallery { flex-direction: column; }
+            button { width: 80%; }
+        }
+        /*Full screen + Mobile fix*/
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body{
+            min-height: 100vh;
+        }
+        /*phone text sizing*/
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            p {
+                font-size: 16px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SHARNISE MY VALENTINE!!</h1>
+    <p style="animation: fadeIN 3s ease-in-out;">YOU MEAN THE WORLD TO ME </p>
+    <h2>I love you so much!</h2>
+
+    <p>You are the most amazing person in the world! I am so grateful to have you in my life. You make every day brighter just by being you. I love you more than words can express. Happy Valentine's Day, my love! I can remember the first time we met like it was yesterday. Your smile, your laugh, the way you looked at me - it all felt so magical. Since that day, my love for you has only grown stronger. You are my best friend, my confidant, and my soulmate. I can't wait to spend many more Valentine's Days with you, creating beautiful memories together.</p>
+
+    <h2>MY WISHES</h2>
+    <p>My wish for us this Valentine's Day is that our love continues to grow and flourish.</p>
+    <p>I wish for us to always communicate openly and honestly with each other.</p>
+    <p>I wish for us to support each other's dreams and aspirations.</p>
+    <p>I wish for us to create a lifetime of happy memories together.</p>
+    <p>Most of all, I wish for us to always remember how much we love each other. Happy Valentine's Day, my love!</p>
+
+    <h1>PICTURES THAT I GLANCE ON DAILY!</h1>
+    <section class="memory-gallery">
+        <figure class="memory-card">
+          <img src="images/sec.jpg" alt="sharnisephoto" width="300" height="300">
+            <figcaption>One of the first snaps you sent during our first conversation</figcaption>
+        </figure>
+        <figure class="memory-card">
+            <img src="images/first.jpg" alt="Sharnise Photo" width="300" height="300">
+            <figcaption>heres the other One</figcaption>
+        </figure>
+        <figure class="memory-card">
+            <img src="images/pamphylia.jpg" alt="Sharnise Photo" width="300" height="300">
+         <figcaption>see how you ATEE with your uniform</figcaption>
+        </figure>
+        <figure class="memory-card">
+            <img src="images/sharn.jpg" alt="sharnisephoto" width="300" height="400">
+            <figcaption>Naturally beautiful</figcaption>
+        </figure>
+        <figure class="memory-card">
+            <img src="images/wairimu.jpg" alt="sharnise" width="300" height="400">
+            <figcaption>Look at the smile, so damn much NAIVE!!</figcaption>
+        </figure>
+        <figure class="memory-card">
+            <img src="images/sharnise.jpg" alt="sharnisephoto" width="300" height="400">
+            <figcaption>No filters just so NATURAL</figcaption>
+        </figure>
+        <figure class="memory-card">
+            <img src="images/isabais.jpg" alt="sharnisephoto" width="300" height="400">
+            <figcaption>Look at this one!!</figcaption>
+        </figure>
+
+    </section>
+
+    <h2>Do you love me, Sharnise?</h2>
+    <div class="buttons">
+        <button class="yes-btn" onclick="alert('Yay! more than you even think!')">Yes ❤️</button>
+        <button class="always-btn" onclick="alert('Forever and always!')">Always 💍</button>
+    </div>
+
+    <h2>Will you be my valentine forever?</h2>
+    <div class="buttons">
+        <button class="yes-btn" onclick="alert('Babbbbyyy, i cant wait to be with you forever!')">Yes ❤️</button>
+        <button class="always-btn" onclick="alert('Forever and always!')">Always 💍</button>
+    </div>
+
+    <!-- Music -->
+    <audio id="bg-music" src="music/NIGHT.mp3" loop></audio>
+    <button class="music-btn" onclick="toggleMusic()">Toggle Music</button>
+
+    <footer>
+        <p>Thank you for being part of my life!</p>
+        <p>&copy; 2024 <span>Sharnise & Isabai</span>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Music toggle
+        function toggleMusic() {
+            const music = document.getElementById('bg-music');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
+        // Try autoplay on load
+        window.addEventListener('click', () => {
+            const music = document.getElementById('bg-music');
+            if (music.paused) {
+                music.play();
+            }
+        }, { once: true });
+
+        // Floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            const size = 20 + Math.random() * 30;
+            heart.style.width = heart.style.height = size + 'px';
+            heart.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 80%)`;
+            heart.style.bottom = '-100px';
+            heart.style.animationDuration = (2 + Math.random() * 3) + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 300);
+
+        document.addEventListener("click", function(){
+            if(!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            }
+        }, { once: true });
+    </script>
+
+</body>
+</html>
